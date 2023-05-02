@@ -19,7 +19,12 @@ let data = [];
 
 // ROUTES
 app.get('/', function(req, res) {
-  res.send("<p>" + data + "</p>");
+  let list = "<ol>";
+  data.forEach((value)=>{
+    list += "<li>" + value + "</li>"
+  })
+  list += "</ol>"
+  res.send(list);
 });
 
 app.post('/', function(req, res){
