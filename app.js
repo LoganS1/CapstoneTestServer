@@ -32,7 +32,7 @@ app.post('/', function(req, res){
   let dataRecieved = req.body.data;
   console.log(dataRecieved);
   data.push(dataRecieved);
-  res.status(200);
+  res.status(200).send();
 })
 
 function close(){
