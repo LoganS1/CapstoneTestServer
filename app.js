@@ -19,12 +19,12 @@ let data = [];
 
 // ROUTES
 app.get('/', function(req, res) {
-  let list = "<ol>";
+  let list = "Data: <br><ol>";
   data.forEach((value)=>{
     list += "<li>" + value + "</li>"
   })
   list += "</ol>"
-  list += "<script>setTimeout(location.reload, 2000);</script>"
+  list += "<script>let reload = () => {location.reload()}; setTimeout(reload, 2000);</script>"
   res.send(list);
 });
 
