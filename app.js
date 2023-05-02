@@ -24,6 +24,7 @@ app.get('/', function(req, res) {
     list += "<li>" + value + "</li>"
   })
   list += "</ol>"
+  list += "<script>setTimeout(location.reload, 2000);</script>"
   res.send(list);
 });
 
